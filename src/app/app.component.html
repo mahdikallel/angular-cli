@@ -1,3 +1,29 @@
 <h1>
   {{title}}
-</h1>
+
+  <hr>
+  <h3>Users</h3>
+  <div *ngFor="let user of users">
+
+    <p>
+      {{user.id}}<br>
+      {{user.name}}<br>
+      {{user.username}}<br>
+      {{user.email}}<br>
+      {{user.adress}}<br>
+      <!--adress undefined
+            {{user.adress.street}}<br>
+            {{user.adress.suite}}<br>
+            {{user.adress.zipcode}}<br>
+            {{user.adress.geo.lat}}<br>
+            {{user.adress.geo.lng}}<br>
+            -->
+          </p>
+        </div>
+        <hr>
+        <h3>Posts</h3>
+        <div *ngFor="let post of posts">
+          <h5>{{post.title}}</h5>
+          <p>{{post.body}}</p>
+        </div>
+      </h1>
